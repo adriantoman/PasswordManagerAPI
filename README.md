@@ -18,16 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
+$ PasswordManagerApi::PasswordManager.connect("IP_ADDRESS","PORT","AUTH_TOKEN")
 
-$PasswordManagerApi::PasswordManager.connect("IP_ADDRESS","PORT","AUTH_TOKEN")
+## List resources
+$ PasswordManagerApi::Resource.resources_list
 
-##List resources
-$PasswordManagerApi::Resource.resources_list
-
-##Get password by resource and accout name
-$PasswordManagerApi::Password.get_password_by_name("RESOURCE_NAME","ACCOUNT_NAME")
-##Get password by ids
-$PasswordManagerApi::Password.get_password_by_id(resource_id,account_id)
+## Get password by resource and accout name
+$ PasswordManagerApi::Password.get_password_by_name("RESOURCE_NAME","ACCOUNT_NAME")
+## Get password by ids
+$ PasswordManagerApi::Password.get_password_by_id(resource_id,account_id)
 
 
 

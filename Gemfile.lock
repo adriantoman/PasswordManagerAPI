@@ -1,0 +1,31 @@
+PATH
+  remote: .
+  specs:
+    passwordmanager (0.0.1)
+      httparty
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.0.9)
+    httparty (0.12.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.1)
+    method_source (0.8.2)
+    multi_xml (0.5.5)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    rake (10.1.0)
+    slop (3.4.6)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  passwordmanager!
+  pry
+  rake

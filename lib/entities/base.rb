@@ -10,9 +10,8 @@ module PasswordManagerApi
       connection = PasswordManager.connection
 
       http = Net::HTTP.new(connection.host, connection.port)
-      http.instance_eval { @ssl_context = OpenSSL::SSL::SSLContext.new(:SSLv3)}
       http.use_ssl = true
-      http.ssl_version = 'SSLv3'
+      http.ssl_version = 'TLSv1'
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
       response = nil

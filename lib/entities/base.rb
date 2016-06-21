@@ -16,7 +16,7 @@ module PasswordManagerApi
 
       response = nil
       http.start do |sock|
-        response = sock.get("/restapi/json/v1/#{method}/?AUTHTOKEN=#{connection.auth_token}")
+        response = sock.get("/restapi/json/v1/#{method}?AUTHTOKEN=#{connection.auth_token}")
       end
       if (Integer(response.code) == 200 )
         JSON.load( response.body )

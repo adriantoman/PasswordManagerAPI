@@ -1,12 +1,10 @@
 module PasswordManagerApi
-
   class Base
-
 
     protected
 
     def self.get(method)
-      fail "The connection is not initialized" if PasswordManager.connection.nil?
+      fail 'The connection is not initialized' if PasswordManager.connection.nil?
       connection = PasswordManager.connection
 
       http = Net::HTTP.new(connection.host, connection.port)
@@ -18,17 +16,10 @@ module PasswordManagerApi
       http.start do |sock|
         response = sock.get("/restapi/json/v1/#{method}?AUTHTOKEN=#{connection.auth_token}")
       end
-      if (Integer(response.code) == 200 )
-        JSON.load( response.body )
-      else
-        fail "Error response - The response code was #{response.code} body: #{response.body}"
-      end
+
+      fail "Error response - The response code was #{response.code} body: #{response.body}" unless response.is_a? Net::HTTPSuccess
+      JSON.load response.body
     end
 
-
-
-
   end
-
-
 end

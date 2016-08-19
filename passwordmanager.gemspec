@@ -5,7 +5,7 @@ require 'passwordmanager/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "passwordmanager"
-  spec.version       = Passwordmanager::VERSION
+  spec.version       = PasswordManagerApi::VERSION
   spec.authors       = ["Adrian Toman"]
   spec.email         = ["adrian.toman@gooddata.com"]
   spec.summary       = "Gem used for connection to Password Manager Pro Rest Api"

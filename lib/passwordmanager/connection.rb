@@ -1,9 +1,7 @@
 module PasswordManagerApi
-
-
   class Connection
 
-    attr_accessor :host,:port,:auth_token
+    attr_accessor :host, :port, :auth_token
 
     def initialize(host,port,auth_token)
       @host = host
@@ -12,10 +10,4 @@ module PasswordManagerApi
     end
 
   end
-
-
-
-
-
-
 end
